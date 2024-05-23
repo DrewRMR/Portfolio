@@ -40,3 +40,8 @@
     background-color: rgb(0, 0, 0);
 }
 
+#sidebar h1 .logo {
+  color: #fff;
+  display: block;
+  padding: 10px 30px;
+  background: #b90606; }
