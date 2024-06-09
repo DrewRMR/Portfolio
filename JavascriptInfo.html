@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Power of JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- THIS JQUERY VERSION NEEDED FOR POPUP -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Box style */
+        .code-box {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn bte-dark">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+
+            <h1><a href="index.html" class="logo">Andrew Marshall-Read's Portfolio</a></h1>
+
+            <div style="width: 100%; text-align: center; margin: 5px;">
+                <img src="images/javascriptthumb.png" style="border-radius: 50%; width: 40%;">
+            </div>
+
+            <ul class="list-unstyled components mb-5">
+                <li class="active"><a href="index.html"><span class="fa fa-home mr-3"></span> Home</a></li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content" class="p-4 p-md-5 pt-5" style="width: 100%">
+
+            <img src="images/javascriptjumbo.jpeg" alt="Banner Image" style="width: 100%; height: auto;">
+            <br>
+            <br>
+            <h1>What is JavaScript?</h1>
+            <p class="intro">
+                JavaScript is a dynamic programming language primarily used for enhancing interactivity and functionality on websites.
+                As one of the core technologies in web development, alongside HTML and CSS, JavaScript enables developers to create dynamic and engaging
+                web experiences. Originally developed by Netscape, it has evolved into a versatile language supporting multiple programming paradigms.
+                <br>
+            <p>Here's a breakdown of JavaScript's key aspects:</p>
+            <br>
+            <ul>
+                <li><strong>Purpose:</strong> JavaScript is utilized to add interactive features, manipulate HTML and CSS, handle user events like clicks and keyboard inputs, and communicate asynchronously with servers for data exchange without page reloads.</li>
+                <br>
+                <li><strong>Execution Environment:</strong> JavaScript code executes on the client side, within the user's web browser, enabling real-time interactions and dynamic updates to web content.</li>
+                <br>
+                <li><strong>Versatility:</strong> JavaScript is not limited to web browsers; it's also employed in server-side development (Node.js) and mobile app development (React Native), showcasing its adaptability and widespread use in various domains.</li>
+                <br>
+                <li><strong>Functionality:</strong> JavaScript enables developers to dynamically update and modify page content through interaction with the Document Object Model (DOM), ensuring a seamless user experience with responsive and engaging web interfaces.</li>
+            </ul>
+
+            <h2>JavaScript Examples</h2>
+            <br>
+            <!-- Example 1: Change the text of a paragraph -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Example: Change the text of a paragraph</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="code-box">
+                                document.getElementById("demo").innerHTML = "Hello, World!";
+                            </div>
+                            <p>This example demonstrates how to use JavaScript to dynamically change the content of a paragraph element with the ID "demo" to display the text "Hello, World!".</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <!-- Example 2: Alert a message when a button is clicked -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Example: Alert a message when a button is clicked</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="code-box">
+                                document.getElementById("myButton").addEventListener("click", function() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;alert("Button clicked!");<br>
+                                });
+                            </div>
+                            <p>From this code we can see how to use JavaScript to add an event listener to a button element with the ID "myButton". When the button is clicked, it displays an alert message saying "Button clicked!".</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <!-- Example 3: Validate a form field (e.g., email) -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Example: Validate a form field (e.g., email)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="code-box">
+                                function validateForm() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;var email = document.getElementById("email").value;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;if (!email.includes("@")) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("Please enter a valid email address.");<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                }
+                            </div>
+                            <p>This example demonstrates how to use JavaScript to validate a form field, specifically checking if an email address entered into a field with the ID "email" contains the "@" symbol. If not, it displays an alert message asking the user to enter a valid email address.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <!-- Example 4: Fetch data from a server using AJAX -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Example: Fetch data from a server using AJAX</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="code-box">
+                                var xhttp = new XMLHttpRequest();<br>
+                                xhttp.onreadystatechange = function() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;if
+                                (this.readyState == 4 && this.status == 200) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("data").innerHTML = this.responseText;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                };<br>
+                                xhttp.open("GET", "data.txt", true);<br>
+                                xhttp.send();
+                            </div>
+                            <p>This demonstrates how to use JavaScript to fetch data from a server asynchronously using AJAX. It creates a new XMLHttpRequest object, sets up an event listener to handle changes in the request state, and sends a request to retrieve data from a file named "data.txt". When the request is successful (status 200), it updates the content of an element with the ID "data" with the received response text.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <!-- Example 5: Animate an element -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Example: Animate an element</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="code-box">
+                                // Example: Animate an element<br>
+                                function animateElement() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;var element = document.getElementById("animate");<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;var position = 0;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;var id = setInterval(frame, 5);<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;function frame() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (position == 350) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearInterval(id);<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position++;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.style.left = position + 'px';<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                }
+                            </div>
+                            <p>Here the code shows us how to use JavaScript to create an animation by gradually changing the position of an element over time. It defines a function called "animateElement" that moves an element with the ID "animate" horizontally across the screen. The animation stops when the element reaches a position of 350 pixels from the left.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Empowering &amp; Engaging</h2>
+            <br>
+            <h5>In essence, JavaScript empowers developers to create dynamic and engaging web experiences, enhancing user interaction and responsiveness.</h5>
+            <br>
+            <br>
+        </div>
+    </div>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>

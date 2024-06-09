@@ -1,65 +1,205 @@
 <!doctype html>
 <html lang="en">
-  <head>
-  	<title>Andrew Marshall-Read Portfolio</title>
+<head>
+    <title>Understanding CSS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
-		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
 
-    <script src="https://kit.fontawesome.com/bdad449d8d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--THIS JQUERY VERSION NEEDED FOR POPUP-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
-  </head>
 
-  <body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
 
-<div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Accordion Item #1
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+
+        <nav id="sidebar" class="">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn bte-dark">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+
+            <h1><a href="index.html" class="logo">Andrew Marshall-Read's Portfolio</a></h1>
+
+            <div style="width: 100%; text-align: center; margin: 5px;">
+                <img src="images/css.jpeg" style="border-radius: 50%; width: 40%;">
+            </div>
+
+            <ul class="list-unstyled components mb-5">
+                <li class="active"><a href="index.html"><span class="fa fa-home mr-3"></span> Home</a></li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5" style="width: 100%">
+
+            <img src="images/sta-je-css.png" alt="Banner Image" style="width: 100%; height: auto;">
+            <br/>
+            <br/>
+            <h1>Introduction to CSS</h1>
+            <p class="intro">CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML. CSS defines how elements should be rendered on screen, on paper, in speech, or on other media. Here are the key aspects of CSS:</p>
+
+            <h2>Core Concepts</h2>
+
+            <h3>Selectors</h3>
+            <p>These are patterns used to select the elements you want to style. Examples include:</p>
+            <ul>
+                <li>Element selectors (e.g., <code>p</code>)</li>
+                <li>Class selectors (e.g., <code>.class-name</code>)</li>
+                <li>ID selectors (e.g., <code>#id-name</code>)</li>
+            </ul>
+
+            <h3>Properties and Values</h3>
+            <p>CSS styles are defined by property-value pairs. For example:</p>
+            <ul>
+                <li><code>color: red;</code> sets the text color to red</li>
+                <li><code>font-size: 20px;</code> sets the font size to 20 pixels</li>
+            </ul>
+
+            <h3>Cascade</h3>
+            <p>The term "cascading" refers to the way CSS applies rules in a hierarchical manner, allowing multiple style sheets to influence a document. The browser determines which styles to apply based on specificity, importance, and source order.</p>
+
+            <h3>Box Model</h3>
+            <p>This is a fundamental concept in CSS, describing the rectangular boxes generated for elements. The box model includes:</p>
+            <ul>
+                <li>Content</li>
+                <li>Padding</li>
+                <li>Border</li>
+                <li>Margin</li>
+            </ul>
+
+            <h3>Flexbox and Grid</h3>
+            <p>Modern layout techniques that make it easier to design responsive layouts. Flexbox is used for one-dimensional layouts, while Grid is for two-dimensional layouts.</p>
+
+            <h2>Example</h2>
+            <p>Here's a simple example of HTML and CSS:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>HTML</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 class="header"&gt;Hello, World!&lt;/h1&gt;
+  &lt;p id="intro"&gt;Welcome to CSS styling!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                            </code></pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>CSS (styles.css)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  color: blue;
+  text-align: center;
+}
+
+#intro {
+  color: green;
+  font-size: 20px;
+}
+                            </code></pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Importance in Web Development</h2>
+            <h5>CSS is crucial for web development as it separates content (HTML) from design, making it easier to maintain and update websites. It enhances user experience by providing responsive and visually appealing layouts.</h5>
+            <br />
+
         </div>
-      </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Accordion Item #2
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
-
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
