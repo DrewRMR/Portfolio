@@ -1,6 +1,18 @@
 .cards-header {
-    background-color: steelblue;
-    color: lightgray;
+    background-color: rgb(3, 3, 3);
+    color: rgb(173, 56, 56);
+    padding-left: 5px;
+}
+
+.cards-header-js {
+    background-color: rgb(242, 201, 16);
+    color: rgb(0, 0, 0);
+    padding-left: 5px;
+}
+
+.cards-header-html {
+    background-color: rgb(79, 202, 251);
+    color: rgb(0, 0, 0);
     padding-left: 5px;
 }
 
@@ -11,9 +23,18 @@
 }
 
 .cards-content {
+    color:black;
     margin: 2px;
     margin-bottom: 0;
-    background-color: whitesmoke;
+    background-color: rgba(199, 166, 166, 0.2);
+    padding: 5px;    
+}
+
+.cards-content-intro {
+    color:black;
+    margin: 0px;
+    margin-bottom: 0;
+    background-color: rgba(199, 166, 166, 0.2);
     padding: 5px;    
 }
 
@@ -26,7 +47,7 @@
 }
 
 .intro {
-    background-color: whitesmoke;
+    background-color: #bbc5ce;
     margin: 15px 50px 15px 50px;
     padding: 15px 30px 15px 30px;
     border-left: 15px solid gray;
@@ -40,8 +61,17 @@
     background-color: rgb(0, 0, 0);
 }
 
-#sidebar h1 .logo {
+sidebar h1 .logo {
   color: #fff;
   display: block;
   padding: 10px 30px;
-  background: #b90606; }
+  background: #fff; }
+
+.code-box {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: monospace;
+}

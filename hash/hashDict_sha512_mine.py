@@ -1,11 +1,10 @@
 import hashlib
 
-strings = [
-    "Hello, world!",
-    "This is my test dictionary",
-    "Does this look good?",
-    "I still dont quite get it..",
-]
+strings = ["test"]
+#    "Hello, world!",
+##    "This is my test dictionary",
+#    "Does this look good?",
+#]
 
 hash_dict = {}
 
@@ -15,5 +14,5 @@ for string in strings:
     
 for key, val in hash_dict.items():
     
-    print(f"{key:<50}:{val:>2}")
+    print:(f"{key:<50}{val:>2}")
 

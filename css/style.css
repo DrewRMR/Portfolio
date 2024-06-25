@@ -7995,7 +7995,7 @@ button.bg-dark:focus {
   color: #fff !important; }
 
 .text-primary {
-  color: #007bff !important; }
+  color: rgb(220, 53, 69) !important; }
 
 a.text-primary:hover, a.text-primary:focus {
   color: #0056b3 !important; }
@@ -8141,8 +8141,8 @@ body {
   font-size: 14px;
   line-height: 1.8;
   font-weight: normal;
-  background: #fff;
-  color: gray; }
+  background: #ced4da;
+  color: black; }
 
 a {
   -webkit-transition: .3s all ease;
@@ -8197,7 +8197,7 @@ h1, h2, h3, h4, h5,
 
 #sidebar {
   min-width: 250px;
-  max-width: 250px;
+  max-width: 280px;
   background: #212121;
   color: #fff;
   -webkit-transition: all 0.3s;
@@ -8215,10 +8215,10 @@ h1, h2, h3, h4, h5,
     font-weight: 700;
     font-size: 20px; }
     #sidebar h1 .logo {
-      color: #fff;
+      color: #000;
       display: block;
       padding: 10px 30px;
-      background: #b90606; }
+      background: #8a0a0a; }
   #sidebar ul.components {
     padding: 0; 
     margin-right: 15px; }

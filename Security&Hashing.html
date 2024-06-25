@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Security & Hashing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+    <script src="https://kit.fontawesome.com/bdad449d8d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+      /* CSS styles */
+
+
+      p {
+          color: #030303;
+      }
+
+      ul {
+          list-style-type: disc;
+          padding-left: 20px;
+      }
+
+      code {
+          background-color: #eee;
+          padding: 2px 4px;
+          border-radius: 4px;
+      }
+
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 20px;
+      }
+
+      table, th, td {
+          border: 1px solid #ddd;
+      }
+
+      th, td {
+          padding: 8px;
+          text-align: left;
+      }
+
+      th {
+          background-color: #f2f2f2;
+      }
+  </style>
+  </head>
+
+  <body>
+
+		<div class="wrapper d-flex align-items-stretch">
+		
+            <nav id="sidebar" class="">
+                        <div class="custom-menu">
+                            <button type="button" id="sidebarCollapse" class="btn bte-dark">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                    </button>
+                </div>
+                <h1><a href="index.html" class="logo">DrewRMR Portfolio</a></h1>
+
+                <div style="width: 100%; text-align: center; margin: 5px;">
+                <img src="images/me.png" style="border-radius: 50%; width: 40%;">
+                </div>
+
+                <ul class="list-unstyled components mb-5">
+                    <li class="active"><a href="index.html"><span class="fa fa-home mr-3"></span>Home</a></li>
+                    <li><a href="htmlBasics.html"><span class="fa fa-html5 mr-3"></span>HTML Basics</a></li>
+                    <li><a href="Understanding CSS.html"><span class="fa fa-css3 mr-3"></span>Understanding CSS</a></li>
+                    <li><a href="JavascriptInfo.html"><i class="fa-brands fa-js mr-3"></i>JavaScript</a></li>
+                    <li><a href="Security&Hashing.html"><span class="fa fa-hashtag mr-3"></span>Security & Hashing</a></li>
+                    <li><a href="SQL.html"><span class="fa fa-database mr-3"></span>SQL & Data Management</a></li>
+                    <li>
+                      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class="fa-brands fa-python mr-3"></span>De-Duper Project</a>
+                      <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                          <a href="SDLC.html">The Software Development Lifecycle</a>
+                        </li>
+                        <li>
+                          <a href="De-Duper_Project.html">The De-Duper Project: Working as a Team</a>
+                        </li>
+                      </ul>
+                    </li>
+                </ul>
+                
+                <div style="width: 100%; text-align: center;">
+                <a href="https://form.jotform.com/241434276686363"><img src="images/contactmeseethrough.png" width="100" alt=""></a>        
+                </div>        
+      
+            </nav>
+                    <!-- Page Content -->
+        <div id="content" class="p-4 p-md-5 pt-5" style="width: 100%">
+            <div class="text-left d-none d-lg-block" style="background-color:#ffffff;">
+          <img src="images/hash.jpeg" alt="Banner Image" style="width: 30%; height: 6%; margin-left: 350px;">
+            </div>
+          <br>
+          <br>
+          <h1>What is Hash and What does it do?</h1>
+          <p class="intro">
+            A hash is a fixed-length code generated from data of any size using a mathematical function. It acts 
+            like a digital fingerprint, uniquely representing the input data. Hash functions are designed to be 
+            fast to compute, produce consistent results for the same input, and be practically impossible to reverse. 
+            They're used to verify data integrity, securely store passwords, and efficiently organize information 
+            in databases. Even a tiny change in the input produces a significantly different hash, making 
+            them useful for detecting alterations in data. Hashes play a crucial role in various cybersecurity 
+            applications and data management techniques.
+              <br>
+            <h2>What is it's Role in Security?</h2>
+          <p><u>Hashing plays a crucial role in security for several reasons:</u></p>
+          
+          <ul>
+              <li><strong>Data Integrity:</strong> Hashes ensure data integrity by producing a unique fixed-size string (the hash value) from input data. Even a small change in the input data will produce a significantly different hash. This makes it easy to verify whether data has been altered.</li>
+              <br>
+              <li><strong>Password Storage:</strong> Storing passwords in plaintext is a significant security risk. Instead, passwords are hashed before being stored. When a user logs in, the entered password is hashed and compared to the stored hash. This way, even if the password database is compromised, the actual passwords remain secure.</li>
+              <br>
+              <li><strong>Digital Signatures and Certificates:</strong> Hashes are used in digital signatures to verify the authenticity and integrity of messages and documents. A digital signature is created by hashing the message and encrypting the hash with the sender’s private key. The recipient can decrypt the hash with the sender's public key and compare it with the hash of the received message to ensure it hasn’t been tampered with.</li>
+              <br>
+              <li><strong>Message Authentication Codes (MACs):</strong> Hashes are used in MACs to verify both the integrity and authenticity of a message. A MAC is created by hashing the message along with a secret key. The receiver, who knows the secret key, can perform the same hashing operation and verify that the message has not been altered.</li>
+              <br>
+              <li><strong>Data Deduplication:</strong> Hashes help in identifying duplicate data without comparing the actual data itself. This is useful in optimizing storage by eliminating redundant copies of data.</li>
+              <br>
+              <li><strong>Cryptographic Protocols:</strong> Hashes are integral to many cryptographic protocols, including SSL/TLS (for secure web communication), blockchain (for creating unique identifiers for blocks of transactions), and many others.</li>
+            </ul>
+
+            <p><u>Common Hash Functions:</u></p>
+            <li>MD5: Widely used in the past but now considered insecure due to vulnerabilities.<br>
+            <li>SHA-1: More secure than MD5 but also considered weak against certain attacks.<br>
+            <li>SHA-256: Part of the SHA-2 family, currently one of the most secure and widely used hash functions.<br>
+            <li>SHA-3: The latest member of the Secure Hash Algorithm family, designed to be highly secure.<br>
+            <br>
+          <h2>Examples of Hashing</h2>
+
+
+          <div class="container m-0 p-0">
+          <!-- Example 1: Change the text of a paragraph -->
+              <div class="row m-0 p-0">
+                  <div class="col-sm-12 mb-4">
+                      <div class="cards">
+                          <h5 class="cards-header-js">Example: Change the text of a paragraph</h5>
+                          <p class="cards-content-intro">
+  
+                              <td>
+                                  <div class="code-box">
+                                      document.getElementById("demo").innerHTML = "Hello, World!";
+                                  </div>
+                                  <p>This example demonstrates how to use JavaScript to dynamically change the content of a paragraph element with the ID "demo" to display the text "Hello, World!".</p>
+                              
+                              </td>
+                          </p>
+                          <div class="cards-footer">
+                          <div class="cards-footer">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          <!-- Example 2: Alert a message when a button is clicked -->
+              <div class="row m-0 p-0">
+                  <div class="col-sm-12 mb-4">
+                      <div class="cards">
+                          <h5 class="cards-header-js">Example: Alert a message when a button is clicked</h5>
+                          <p class="cards-content-intro">
+
+                              <td>
+                                  <div class="code-box">
+                                      document.getElementById("myButton").addEventListener("click", function() {<br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;alert("Button clicked!");<br>
+                                      });
+                                  </div>
+                                  <button id="myButton">Click me</button>
+                                  <br/><br/>
+                                  <p>From this code we can see how to use JavaScript to add an event listener to a button element with the ID "myButton". When the button is clicked, it displays an alert message saying "Button clicked!".</p>
+                                  <script>
+                                      document.getElementById("myButton").addEventListener("click", function() {
+                                          alert("Button clicked!");
+                                      });
+                                  </script>
+                              </td>
+
+                          </p>
+                          <div class="cards-footer">
+                          <div class="cards-footer">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          <!-- Example 3: Validate a form field (e.g., email) -->
+              <div class="row m-0 p-0">
+                  <div class="col-sm-12 mb-4">
+                      <div class="cards">
+                          <h5 class="cards-header-js">Example: Validate a form field (e.g., email)</h5>
+                          <p class="cards-content-intro">
+
+                              <td>
+                                  <div class="code-box">
+                                      function validateForm() {<br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;var email = document.getElementById("email").value;<br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;if (!email.includes("@")) {<br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("Please enter a valid email address.");<br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                      }
+                                  </div>
+                                  <p>This example demonstrates how to use JavaScript to validate a form field, specifically checking if an email address entered into a field with the ID "email" contains the "@" symbol. If not, it displays an alert message asking the user to enter a valid email address.</p>
+                              </td>
+                              <body>
+                                  <form onsubmit="return validateForm()">
+                                      <label for="email">Email:</label>
+                                      <input type="text" id="email" name="email" required>
+                                      <input type="submit" value="Submit">
+                                  </form>
+                              
+                                  <script>
+                                      function validateForm() {
+                                          var email = document.getElementById("email").value;
+                                          if (!email.includes("@")) {
+                                              alert("Please enter a valid email address.");
+                                              return false;
+                                          }
+                                          return true;
+                                      }
+                                  </script>
+                          </p>
+                          <div class="cards-footer">
+                          <div class="cards-footer">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          <!-- Example 4: Fetch data from a server using AJAX -->
+              <div class="row m-0 p-0">
+                  <div class="col-sm-12 mb-4">
+                      <div class="cards">
+                          <h5 class="cards-header-js">Example: Fetch data from a server using AJAX</h5>
+                          <p class="cards-content-intro">
+
+                              <td>
+                                  <div class="code-box">
+                                      var xhttp = new XMLHttpRequest();<br>
+                                      xhttp.onreadystatechange = function() {<br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;if
+                                      (this.readyState == 4 && this.status == 200) {<br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("data").innerHTML = this.responseText;<br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                      };<br>
+                                      xhttp.open("GET", "data.txt", true);<br>
+                                      xhttp.send();
+                                  </div>
+                                  <p>This demonstrates how to use JavaScript to fetch data from a server asynchronously using AJAX. 
+                                      It creates a new XMLHttpRequest object, sets up an event listener to handle changes in the request state,
+                                       and sends a request to retrieve data from a file named "data.txt". When the request is successful
+                                        (status 200), it updates the content of an element with the ID "data" with the received response text.</p>
+                                      
+                                      AJAX requests are useful because they allow:
+                                      <p></p>
+                                      <ul><li> Dynamic content updates without page reloads
+                                      <li> Improved website performance and responsiveness
+                                      <li> Real-time data fetching
+                                      <li> Reduced server load and bandwidth usage
+                                      <li> Enhanced user interactivity
+                                      <li> Better separation of data and presentation
+                                      <li> Easy integration with web APIs
+                                      <li> Smooth form submissions with instant feedback
+                                      <li> Implementation of lazy loading techniques
+                                      <li> Development of Single Page Applications (SPAs)
+                                        
+                                        These capabilities enable the creation of more efficient, interactive, and user-friendly web applications.
+                                      </td>
+
+                          </p>
+                          <div class="cards-footer">
+                          <div class="cards-footer">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+          <!-- Example 5: Animate an element -->
+              <div class="row m-0 p-0">
+                  <div class="col-sm-12 mb-4">
+                      <div class="cards">
+                          <h5 class="cards-header-js">Example: Animate an element</h5>
+                          <p class="cards-content-intro">
+
+                              <tr>
+                                  <td>
+                                      <div class="code-box">
+                                          function animateElement() {<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;var element = document.getElementById("animate");<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;var position = 0;<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;var id = setInterval(frame, 5);<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;function frame() {<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (position == 350) {<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearInterval(id);<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position++;<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.style.left = position + 'px';<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                          }
+                                      </div>
+                                      <p>Here the code shows us how to use JavaScript to create an animation by gradually changing the position of an element over time. It defines a function called "animateElement" that moves an element with the ID "animate" horizontally across the screen. The animation stops when the element reaches a position of 350 pixels from the left.</p>
+                                      <style>
+                                          #container {
+                                              width: 400px;
+                                              height: 50px;
+                                              position: relative;
+                                              background: #f0f0f0;
+                                          }
+                                          #animate {
+                                              width: 50px;
+                                              height: 50px;
+                                              position: absolute;
+                                              background-color: red;
+                                          }
+                                      </style>
+                                  </head>
+                                  <body>
+                                      <div id="container">
+                                          <div id="animate"></div>
+                                      </div>
+                                      <button onclick="animateElement()">Start Animation</button>
+                                  
+                                      <script>
+                                          function animateElement() {
+                                              var element = document.getElementById("animate");
+                                              var position = 0;
+                                              var id = setInterval(frame, 5);
+                                              function frame() {
+                                                  if (position == 350) {
+                                                      clearInterval(id);
+                                                  } else {
+                                                      position++;
+                                                      element.style.left = position + 'px';
+                                                  }
+                                              }
+                                          }
+                                      </script>
+                                  </td>
+                              </tr>
+
+                          </p>
+                          <div class="cards-footer">
+                          <div class="cards-footer">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          <h2>Empowering &amp; Engaging</h2>
+          <br>
+          <h5>In essence, JavaScript empowers developers to create dynamic and engaging web experiences, enhancing user interaction and responsiveness.</h5>
+          <br>
+          <br>
+        </div>
+  </div>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    
+    </body>
+</html>

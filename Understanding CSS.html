@@ -9,6 +9,10 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+    <script src="https://kit.fontawesome.com/bdad449d8d.js" crossorigin="anonymous"></script>
+
     <!--THIS JQUERY VERSION NEEDED FOR POPUP-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -16,32 +20,6 @@
     <link rel="stylesheet" href="css/custom.css">
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        h2 {
-            color: #555;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-
-        p {
-            color: #666;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
 
         code {
             background-color: #eee;
@@ -80,15 +58,36 @@
                 </button>
             </div>
 
-            <h1><a href="index.html" class="logo">Andrew Marshall-Read's Portfolio</a></h1>
+            <h1><a href="index.html" class="logo">DrewRMR Portfolio</a></h1>
 
             <div style="width: 100%; text-align: center; margin: 5px;">
                 <img src="images/css.jpeg" style="border-radius: 50%; width: 40%;">
             </div>
 
             <ul class="list-unstyled components mb-5">
-                <li class="active"><a href="index.html"><span class="fa fa-home mr-3"></span> Home</a></li>
+                <li class="active"><a href="index.html"><span class="fa fa-home mr-3"></span>Home</a></li>
+                <li><a href="htmlBasics.html"><span class="fa fa-html5 mr-3"></span>HTML Basics</a></li>
+                <li><a href="Understanding CSS.html"><span class="fa fa-css3 mr-3"></span>Understanding CSS</a></li>
+                <li><a href="JavascriptInfo.html"><i class="fa-brands fa-js mr-3"></i>JavaScript</a></li>
+                <li><a href="Security&Hashing.html"><span class="fa fa-hashtag mr-3"></span>Security & Hashing</a></li>
+                <li><a href="SQL.html"><span class="fa fa-database mr-3"></span>SQL & Data Management</a></li>
+                <li>
+                  <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class="fa-brands fa-python mr-3"></span>De-Duper Project (Python)</a>
+                  <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                      <a href="SDLC.html">The Software Development Lifecycle</a>
+                    </li>
+                    <li>
+                      <a href="De-Duper_Project.html">The De-Duper Project: Working as a Team</a>
+                    </li>
+                  </ul>
+                </li>
             </ul>
+
+            <div style="width: 100%; text-align: center;">
+                <a href="https://form.jotform.com/241434276686363"><img src="images/contactmeseethrough.png" width="100" alt=""></a>        
+              </div>        
+            
 
         </nav>
 
@@ -98,7 +97,7 @@
             <img src="images/sta-je-css.png" alt="Banner Image" style="width: 100%; height: auto;">
             <br/>
             <br/>
-            <h1>Introduction to CSS</h1>
+            <h1>Understanding CSS</h1>
             <p class="intro">CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML. CSS defines how elements should be rendered on screen, on paper, in speech, or on other media. Here are the key aspects of CSS:</p>
 
             <h2>Core Concepts</h2>
@@ -125,78 +124,116 @@
             <p>This is a fundamental concept in CSS, describing the rectangular boxes generated for elements. The box model includes:</p>
             <ul>
                 <li>Content</li>
-                <li>Padding</li>
+                <li>Padding (see the example below. Content is in blue and Padding is in green)</li>
                 <li>Border</li>
                 <li>Margin</li>
+                <br>
+                <img src="images/padding_eg.png" alt="Banner Image" style="width: 100%; height: auto;">
+                <br>
             </ul>
 
             <h3>Flexbox and Grid</h3>
             <p>Modern layout techniques that make it easier to design responsive layouts. Flexbox is used for one-dimensional layouts, while Grid is for two-dimensional layouts.</p>
+        <div class="container m-0 p-0">
+            <div class="row m-0 p-0">
+                <div class="col-sm-12 mb-4">
+                    <div class="cards">
+                        <h5 class="cards-header-html">Here's a simple example of HTML and CSS:</h5>
+                        <p class="cards-content-intro">
 
-            <h2>Example</h2>
-            <p>Here's a simple example of HTML and CSS:</p>
+                            <td>
+                                <thead>
+                                    <tr>
+                                        <b><th>HTML</th></b>
+                                    </tr>
+                                </thead>
+                                <div class="code-box">
+                                    &lt;!DOCTYPE html&gt;<br>
+                                    &lt;html&gt;<br>
+                                    &lt;head&gt;<br>
+                                    &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;<br>
+                                    &lt;/head&gt;<br>
+                                    &lt;body&gt;<br>
+                                    &lt;h1 class="header"&gt;Hello, World!&lt;/h1&gt;<br>
+                                    &lt;p id="intro"&gt;Welcome to CSS styling!&lt;/p&gt;<br>
+                                    &lt;/body&gt;<br>
+                                    &lt;/html&gt;<br>
+                                </div>
+                                <p class="cards-content-intro">
+                                    <b><th>CSS (styles.css)</th></b>
+                                </p>
+                                <div class="code-box">
+                                    body {<br>
+                                        background-color: #ced4da;<br>
+                                        font-family: Arial, sans-serif;<br>
+                                    }<br>
+                                    <br>
+                                    .header {<br>
+                                        color: blue;<br>
+                                        text-align: center;<br>
+                                    }<br>
+                                    <br>
+                                    #intro {<br>
+                                        color: green;<br>
+                                        font-size: 20px;<br>
+                                    }<br>
+                                </div>
+                            </td>
+                                </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>HTML</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1 class="header"&gt;Hello, World!&lt;/h1&gt;
-  &lt;p id="intro"&gt;Welcome to CSS styling!&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-                            </code></pre>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                                <!DOCTYPE html>
+                                <html>
+                                <head>
+                                    <style>
+                                        body {
+                                            background-color: #ced4da;
+                                            font-family: "Poppins", Arial, sans-serif;
+                                        }
+                                        
+                                        .header {
+                                            color: blue;
+                                            text-align: center;
+                                        }
+                                        
+                                        #intro {
+                                            color: green;
+                                            font-size: 20px;
+                                        }
+                                    </style>
+                                </head>
+                                <body>
+                                    <h1 class="header">Hello, World!</h1>
+                                    <p id="intro">Welcome to CSS styling!</p>
+                                </body>
+                                </html>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>CSS (styles.css)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <pre><code>body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-}
-
-.header {
-  color: blue;
-  text-align: center;
-}
-
-#intro {
-  color: green;
-  font-size: 20px;
-}
-                            </code></pre>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Importance in Web Development</h2>
-            <h5>CSS is crucial for web development as it separates content (HTML) from design, making it easier to maintain and update websites. It enhances user experience by providing responsive and visually appealing layouts.</h5>
-            <br />
-
+                                <br>
+                                <p>This example demonstrates basic HTML structure and CSS styling techniques. The code consists of two parts:<br>
+                                    <br>
+                                    HTML:<br>
+                                    The HTML file contains a standard document structure with a link to an external CSS file named "styles.css". The body includes an h1 header with the class "header" and a paragraph with the id "intro".<br>
+                                    <br>
+                                    CSS:<br>
+                                    1. The CSS file (styles.css) defines the following styles:<br>
+                                    2. The body is styled with a light gray background and Arial font.<br>
+                                    3. The .header class applies blue color and center alignment to the h1 element.<br>
+                                    4. The #intro id styles the paragraph with green color and 20px font size.<br>
+                                    <br>
+                                    This example illustrates:<br>
+                                    
+                                    1. Basic HTML document structure<br>
+                                    2. Linking an external CSS file<br>
+                                    3. Applying CSS styles using element, class, and id selectors<br>
+                                    
+                                 </td>
         </div>
     </div>
-    </div>
+
+    
+    
+    <h2>Importance in Web Development</h2>
+    <h5>CSS is crucial for web development as it separates content (HTML) from design, making it easier to maintain and update websites. It enhances user experience by providing responsive and visually appealing layouts.</h5>
+    <br />
 
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -10,7 +10,7 @@ def read_passwords_from_file(file_path):
 def verify_login(username, password, hash_dict):
     if username in hash_dict:
         # Calculate SHA-512 hash for the provided password
-        password_hash = hashlib.sha512(password.encode()).hexdigest()
+        password_hash = hashlib.sha512(password.encode()).hexdigest()  #user1 password is "test"
         
         # Compare the stored hash with the hash of the provided password
         if hash_dict[username] == password_hash:
