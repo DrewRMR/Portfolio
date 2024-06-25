@@ -1,0 +1,96 @@
+.cards-header {
+    background-color: rgb(3, 3, 3);
+    color: rgb(173, 56, 56);
+    padding-left: 5px;
+}
+
+.cards-header-js {
+    background-color: rgb(242, 201, 16);
+    color: rgb(0, 0, 0);
+    padding-left: 5px;
+}
+
+.cards-header-hash {
+    background-color: rgb(0, 0, 0);
+    color: rgb(244, 244, 244);
+    padding-left: 5px;
+}
+
+.cards-header-html {
+    background-color: rgb(79, 202, 251);
+    color: rgb(0, 0, 0);
+    padding-left: 5px;
+}
+
+.cards {
+    padding: 4px;
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+
+.cards-content {
+    color:black;
+    margin: 2px;
+    margin-bottom: 0;
+    background-color: rgba(199, 166, 166, 0.2);
+    padding: 5px;    
+}
+
+.cards-content-intro {
+    color:rgb(0, 0, 0);
+    margin: 0px;
+    margin-bottom: 0;
+    background-color: rgba(199, 166, 166, 0.2);
+    padding: 5px; 
+}
+
+.cards-footer {
+    width: 100%; 
+    margin: 2px;
+    margin-top: 0;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.intro {
+    background-color: #bbc5ce;
+    margin: 15px 50px 15px 50px;
+    padding: 15px 30px 15px 30px;
+    border-left: 15px solid gray;
+    color: black;
+    line-height: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+
+.main-background {
+    background-color: rgb(0, 0, 0);
+}
+
+sidebar h1 .logo {
+  color: #fff;
+  display: block;
+  padding: 10px 30px;
+  background: #fff; }
+
+.code-box {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: monospace;
+}
+    .terminal_demo {
+    background-color: #ffffff;
+    padding: 1px;
+    margin-bottom: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+.paragraph {
+    padding-left: 20px;
+    padding-right: 20px;
+}
