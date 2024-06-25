@@ -10,6 +10,12 @@
     padding-left: 5px;
 }
 
+.cards-header-hash {
+    background-color: rgb(0, 0, 0);
+    color: rgb(244, 244, 244);
+    padding-left: 5px;
+}
+
 .cards-header-html {
     background-color: rgb(79, 202, 251);
     color: rgb(0, 0, 0);
@@ -17,7 +23,7 @@
 }
 
 .cards {
-    padding: 2px;
+    padding: 4px;
     border: 1px solid grey;
     border-radius: 2px;
 }
@@ -31,11 +37,12 @@
 }
 
 .cards-content-intro {
-    color:black;
+    color:rgb(0, 0, 0);
     margin: 0px;
     margin-bottom: 0;
     background-color: rgba(199, 166, 166, 0.2);
-    padding: 5px;    
+    padding: 5px;
+    max-width: 100px;  
 }
 
 .cards-footer {
@@ -68,10 +75,23 @@ sidebar h1 .logo {
   background: #fff; }
 
 .code-box {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: monospace;
+}
+    .terminal_demo {
+    background-color: #ffffff;
+    padding: 1px;
+    margin-bottom: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+.paragraph {
+    padding-left: 20px;
+    padding-right: 20px;
 }

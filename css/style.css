@@ -153,7 +153,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: monospace;
   font-size: 1em; }
 
 pre {
@@ -438,7 +438,7 @@ pre {
   font-size: 87.5%;
   color: #212529; }
   pre code {
-    font-size: inherit;
+    font-size: 14px;
     color: inherit;
     word-break: normal; }
 
