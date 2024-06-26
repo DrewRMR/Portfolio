@@ -80,6 +80,9 @@ sidebar h1 .logo {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: monospace;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: auto;
 }
     .terminal_demo {
     background-color: #ffffff;
@@ -88,6 +91,9 @@ sidebar h1 .logo {
     border: 1px solid #ffffff;
     border-radius: 5px;
     font-family: monospace;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: auto;
 }
 
 .paragraph {
