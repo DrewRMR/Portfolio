@@ -297,7 +297,7 @@
                                             &nbsp;&nbsp;&nbsp;&nbsp;var position = 0;<br>
                                             &nbsp;&nbsp;&nbsp;&nbsp;var id = setInterval(frame, 5);<br>
                                             &nbsp;&nbsp;&nbsp;&nbsp;function frame() {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (position == 350) {<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (position == 250) {<br>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearInterval(id);<br>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position++;<br>
@@ -306,10 +306,10 @@
                                             &nbsp;&nbsp;&nbsp;&nbsp;}<br>
                                             }
                                         </div>
-                                        <p>Here the code shows us how to use JavaScript to create an animation by gradually changing the position of an element over time. It defines a function called "animateElement" that moves an element with the ID "animate" horizontally across the screen. The animation stops when the element reaches a position of 350 pixels from the left.</p>
+                                        <p>Here the code shows us how to use JavaScript to create an animation by gradually changing the position of an element over time. It defines a function called "animateElement" that moves an element with the ID "animate" horizontally across the screen. The animation stops when the element reaches a position of 250 pixels from the left.</p>
                                         <style>
                                             #container {
-                                                width: 400px;
+                                                width: 300px;
                                                 height: 50px;
                                                 position: relative;
                                                 background: #f0f0f0;
@@ -334,7 +334,7 @@
                                                 var position = 0;
                                                 var id = setInterval(frame, 5);
                                                 function frame() {
-                                                    if (position == 350) {
+                                                    if (position == 250) {
                                                         clearInterval(id);
                                                     } else {
                                                         position++;
