@@ -191,7 +191,7 @@
 <p class="paragraph"><b>Output:</b></p>
 <div class="terminal_demo">
 <pre><code>test ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff  
-"Press any key to continue . . ."<br><br></code></pre>
+Press any key to continue . . .<br><br></code></pre>
 
             </div>
 
@@ -282,7 +282,7 @@ Hash Dictionary:
 99f97d455d5d62b24f3a942a1abc3fa8863fc0ce2037f52f09bd785b22b800d4f2e7b2b614cb600ffc2a4fe24679845b24886d69bb776fcfa46e54d188889c6f: t   
 87c568e037a5fa50b1bc911e8ee19a77c4dd3c22bce9932f86fdd8a216afe1681c89737fada6859e91047eece711ec16da62d6ccb9fd0de2c51f132347350d8c: e   
 2c1ee68372215b1ce064426b5cdbd4ef2581ace0dd3b21fa2be27f364827242e83f68b68be03f5b3e24be5d1b4315f98a0a96d19713fb3a19dc455fb6adc3431: s   
-Hash dictionary saved to 'hash_dictionary.txt'.
+Hash dictionary saved to <b>'hash_dictionary.txt'</b>.
 Press any key to continue . . .<br><br></code></pre>
                                     
     
@@ -306,11 +306,11 @@ Press any key to continue . . .<br><br></code></pre>
                           <p class="cards-content-intro">
 
                               <td>
-                                <p>When you send a string along with its hash to someone, they don't "decode" the hash to get the original string
+                                <p class="paragraph">When you send a string along with its hash to someone, they don't "decode" the hash to get the original string
                                     (because hashes are one-way functions and cannot be reversed). Instead, they verify the string by computing its
                                      hash themselves and comparing it to the hash you provided. If the hashes match, they can be confident that the 
                                      string you sent is correct.
-                               </p>
+                            </p>
                                <div class="code-box">
                 
     <pre><code>
@@ -356,27 +356,27 @@ Press any key to continue . . .<br><br></code></pre>
 
 
 
-
+                        <p class="paragraph">
                           <u>When I run this script, here's what happens:</u><br>
                           First, I'm reading in the <b>'hash_dictionary.txt'</b> file. This file contains all the hashes I created earlier, each linked to its original character. It's like I'm opening up my own personal codebook.<br>
                           Next, the script asks me to type in the text I want to verify. This should be the same text I used when I first created the hashes.<br>
-                          <p></p>
+                          <p class="paragraph">
                           As I enter each character, the script goes to work:<br>
                             <ul><li>It takes each character and creates a new hash for it, just like I did before.<br>
                             <li>Then it checks this new hash against my "codebook" (the hash dictionary).<br>
                             <li>If the hash matches and corresponds to the right character, I get a message saying that character is verified.<br>
                             <li>If something doesn't match up, I'll know right away because the script tells me that character failed verification.<br></li>
-                          <p></p>
+                            <p class="paragraph">
                             </ul>
-                          I can see this process happening for each character I typed in. It's like watching a security check in real-time!
-                          <p></p>
+                            <p class="paragraph"> I can see this process happening for each character I typed in. It's like watching a security check in real-time!
+                          <p class="paragraph">
                           At the end, I get a final verdict:<br>
                             <ul><li>If every single character checked out okay, I see a message telling me everything was verified successfully.<br>
                             <li>But if even one character didn't match up, I'll know the verification failed.<br></li>
-                          <p></p>
+                            <p class="paragraph">
                             </ul>
-                          This whole process lets me confirm if my original text has remained unchanged. It's a practical way for me to ensure the integrity of my data, catching even the smallest alterations.<br>
-
+                            <p class="paragraph">This whole process lets me confirm if my original text has remained unchanged. It's a practical way for me to ensure the integrity of my data, catching even the smallest alterations.<br>
+                        
 
                           <br>
 <p class="paragraph"><b>Output:</b></p>
@@ -399,10 +399,38 @@ Press any key to continue . . .<br><br></code></pre>
                     <div class="cards-footer">
                         <div class="cards-footer">
 
-</div><br>
+</div>
                         </div>
                         
                     </div>
+
+
+          <!-- Next, the String must be Verified.. -->
+          <div class="row m-0 p-0">
+            <div class="col-sm-12 mb-4">
+                <div class="cards">
+                    <h5 class="cards-header-hash">Kleopatra: An Example GUI that Utilizes this Technology</h5>
+                    <p class="paragraph">
+
+        Kleopatra is a certificate manager and GUI for GnuPG, a popular open-source implementation of 
+        the OpenPGP standard. It provides a user-friendly interface for managing digital certificates, 
+        keys, and performing encryption and signing operations.<p class="paragraph">
+        Kleopatra ties in with my demonstration on hashing and data integrity in several ways:<br>
+        <p class="paragraph"></p>
+        <ul><li>Key Management: It allows users to create, import, and manage cryptographic keys, which are essential for secure communication and data verification.
+        <li>Digital Signatures: Kleopatra facilitates the creation and verification of digital signatures, which use hash functions (like the SHA-512 we discussed) as part of their process.
+        <li>File Encryption: It provides an interface for encrypting files, which often involves hashing as part of the encryption process.
+        <li>Certificate Verification: Kleopatra helps verify the authenticity of digital certificates, which relies on cryptographic hashing to ensure integrity.
+        <br><br>
+        By providing these features in a user-friendly GUI, Kleopatra makes advanced cryptographic operations more accessible to users, complementing the lower-level hashing and verification processes we've explored in these code examples.</p>
+        
+        <div class="cards-footer">
+            <div class="cards-footer">
+</div>
+</div>
+</div>
+</div>
+
           <h2>Securing &amp; Verifying</h2>
           <br>
           <h5>In essence, hashing empowers us to create digital fingerprints, enhancing data integrity and enabling secure verification of information. This process forms the backbone of many cryptographic systems, ensuring our digital world remains trustworthy and resilient.</h5>
